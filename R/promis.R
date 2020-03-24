@@ -45,6 +45,10 @@ vec_ptype2.promis_promis.promis_promis <- function(x, y, ...) {
 vec_ptype2.promis_promis.double <- function(x, y, ...) double()
 vec_ptype2.double.promis_promis <- function(x, y, ...) double()
 
+# promis/character
+vec_ptype2.promis_promis.character <- function(x, y, ...) character()
+vec_ptype2.character.promis <- function(x, y, ...) character()
+
 # casting -----------------------------------------------------------------
 
 vec_cast.promis_promis <- function(x, to, ...) UseMethod("vec_cast.promis_promis")
@@ -60,5 +64,10 @@ vec_cast.promis_promis.promis_promis <- function(x, to, ...) {
 vec_cast.promis_promis.double <- function(x, to, ...) promis(x, domain = domain(to))
 vec_cast.double.promis_promis <- function(x, to, ...) vec_data(x)
 
-
+# promis/character
+vec_cast.character.promis_promis <- function(x, to, ...) {
+  switch(domain(x),
+         "Physical function" = promis_physfx(vec_data(x)),
+         "Pain intensity" = promis_paininten(vec_data(x)))
+}
 
