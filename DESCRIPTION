@@ -17,3 +17,6 @@ Imports:
     cli,
     pillar,
     vctrs
+Suggests: 
+    testthat,
+    covr
