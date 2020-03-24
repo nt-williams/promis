@@ -67,7 +67,10 @@ vec_cast.double.promis_promis <- function(x, to, ...) vec_data(x)
 # promis/character
 vec_cast.character.promis_promis <- function(x, to, ...) {
   switch(domain(x),
-         "Physical function" = promis_physfx(vec_data(x)),
-         "Pain intensity" = promis_paininten(vec_data(x)))
+         "Physical function" = promis_adult_profile_function(vec_data(x)),
+         "Pain intensity" = promis_adult_profile_symptoms(vec_data(x)),
+         "Pain interference" = promis_adult_profile_symptoms(vec_data(x)),
+         "Global physical health" = promis_adult_global_health(vec_data(x)),
+         "Global mental health" = promis_adult_global_mental(vec_data(x)))
 }
 
