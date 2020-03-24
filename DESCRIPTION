@@ -16,7 +16,7 @@ RoxygenNote: 6.1.99.9001
 Imports: 
     cli,
     pillar,
-    vctrs
+    vctrs (>= 0.2.4)
 Suggests: 
     testthat,
     covr
