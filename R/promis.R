@@ -6,7 +6,7 @@ new_promis <- function(x = double(), domain = character()) {
 
   validate_domain(domain)
 
-  new_vctr(x, domain = domain, class = "promis_promis")
+  new_vctr(validate_value(x), domain = domain, class = "promis_promis")
 
 }
 
