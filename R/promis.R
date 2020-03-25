@@ -4,6 +4,8 @@ new_promis <- function(x = double(), domain = character()) {
   vec_assert(x, double())
   vec_assert(domain, ptype = character(), size = 1L)
 
+  validate_domain(domain)
+
   new_vctr(x, domain = domain, class = "promis_promis")
 
 }
