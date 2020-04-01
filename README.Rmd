@@ -22,6 +22,8 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.com/nt-williams/promis.svg?branch=master)](https://travis-ci.com/nt-williams/promis)
 <!-- badges: end -->
 
+> Implementation of an S3 vector class for the [PROMIS](http://www.healthmeasures.net/explore-measurement-systems/promis) health measure
+
 ## Installation
 
 You can install the development version from [GitHub](https://github.com/) with:
@@ -30,4 +32,32 @@ You can install the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("nt-williams/promis")
 ```
+
+## Usage
+
+```{r}
+df <- tibble::tibble(x = c(45, 20, 80, 60, 72, 33))
+df
+```
+
+Numeric vectors can be converted to a `promis` vector with the `promis()` function.
+
+```{r}
+library(promis)
+
+df <- dplyr::mutate(df, x = promis(x, domain = "Physical function"))
+df
+
+df$x
+
+is_promis(df$x)
+```
+
+`promis` vectors encode information about score cutoffs for the specific domain. This allows converting numeric PROMIS scores to their categories by just calling `as.character()`.
+
+```{r}
+dplyr::mutate(df, cutoff = as.character(x))
+```
+
+
 
