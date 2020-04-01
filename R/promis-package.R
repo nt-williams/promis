@@ -1,5 +1,3 @@
-#' @keywords internal
-"_PACKAGE"
 
 # The following block is used by usethis to automatically manage
 # roxygen namespace tags. Modify with care!
@@ -11,5 +9,5 @@ NULL
 #'
 #' @import vctrs
 #' @keywords internal
-#' @name pizza-vctrs
+#' @name promis-vctrs
 NULL

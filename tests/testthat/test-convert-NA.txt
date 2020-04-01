@@ -1,0 +1,8 @@
+> x <- c(50, 45, 20, 100, 60)
+> promis(x, domain = "Physical function")
+Message: Values found outside of [20, 80] bounds. Values converted to NA.
+
+<promis_promis[5]>
+[1] 50 45 20 NA 60
+# Domain: Physical function
+

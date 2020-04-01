@@ -1,0 +1,6 @@
+> x <- c(50, 45, 20, 80, 60)
+> promis(x, domain = "Physical function")
+<promis_promis[5]>
+[1] 50 45 20 80 60
+# Domain: Physical function
+

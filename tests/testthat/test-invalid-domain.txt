@@ -1,0 +1,21 @@
+> x <- c(50, 45, 20, 80, 60)
+> promis(x, domain = "An invalid domain")
+Message: Warning message: Not a supported domain. 
+Currently supported domains are...
+
+Message: Physical function
+
+Message: Pain interference
+
+Message: Pain intensity
+
+Message: Global physical health
+
+Message: Global mental health
+
+Message: Depression
+
+<promis_promis[5]>
+[1] 50 45 20 80 60
+# Domain: An invalid domain
+

@@ -1,13 +1,14 @@
 Package: promis
-Title: Implementation of an Enhanced Vector Class for the PROMIS Health Measure
-Version: 0.0.0.9000
+Title: Implementation of an S3 Vector Class for the PROMIS Health Measure
+Version: 0.0.1.9000
 Authors@R: 
     person(given = "Nick",
            family = "Williams",
            role = c("aut", "cre"),
            email = "niw4001@med.cornell.edu", 
            comment = c(ORCID = "0000-0002-1378-4831"))
-Description: TO DO. 
+Description: Analysis of the Patient Reported Outcomes Measurement 
+    Information System (PROMIS) health measure.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -15,8 +16,9 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.99.9001
 Imports: 
     cli,
+    methods,
     pillar,
     vctrs (>= 0.2.4)
 Suggests: 
-    testthat,
+    testthat (>= 2.1.0),
     covr
